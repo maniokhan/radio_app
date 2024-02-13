@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
 import '../constants/app_colors.dart';
+import '../constants/app_sizes.dart';
 
-class AllNotifications extends StatefulWidget {
-  const AllNotifications({super.key});
+class NotificationsName extends StatefulWidget {
+  const NotificationsName({super.key});
 
   @override
-  State<AllNotifications> createState() => _AllNotificationsState();
+  State<NotificationsName> createState() => _NotificationsNameState();
 }
 
-class _AllNotificationsState extends State<AllNotifications> {
+class _NotificationsNameState extends State<NotificationsName> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +40,39 @@ class _AllNotificationsState extends State<AllNotifications> {
       body: ListView(
         physics: BouncingScrollPhysics(),
         padding: EdgeInsets.all(16),
-        children: [],
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5),
+            child: Container(
+              padding: EdgeInsets.all(12.0),
+              decoration: BoxDecoration(
+                color: AppColors.darkGrey,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              alignment: Alignment.center,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  gapW4,
+                  Row(
+                    children: [
+                      Expanded(
+                          child: Text(
+                        "Lorem Ipsum is simply dummy text of the\n printing and typesetting industry. Lorem\n Ipsum has been the industry's standard\n dummy text ever since the 1500s, when an\n  unknown printer took a galley of type and\n  scrambled it to make a type specimen book.\n  It has survived not only five centuries, but\n  also the leap into electronic typesetting,\n  remaining essentially unchanged.",
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Color(0xff9A9A9A),
+                            letterSpacing: -0.33,
+                            fontWeight: FontWeight.w400),
+                      )),
+                    ],
+                  ),
+                  gapW4,
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

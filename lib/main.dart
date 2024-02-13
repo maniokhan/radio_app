@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:radio_app/src/constants/app_colors.dart';
 import 'package:radio_app/src/features/splash_screen.dart';
+import 'package:radio_app/src/settings/allNotificationsSettings.dart';
 import 'package:radio_app/src/settings/home.dart';
+
+import 'src/settings/notifications.dart';
+import 'src/settings/notificationsName.dart';
 
 void main() {
   runApp(
@@ -24,7 +28,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       // home: SplashScreen(),
-      home: HomeSettingsPage(),
+      home: const AllNotifications(),
     );
   }
 }

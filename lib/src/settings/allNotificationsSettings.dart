@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../constants/app_colors.dart';
+import '../constants/app_sizes.dart';
 
 class AllNotifications extends StatefulWidget {
   const AllNotifications({super.key});
@@ -26,7 +27,7 @@ class _AllNotificationsState extends State<AllNotifications> {
         ),
         backgroundColor: AppColors.background,
         title: Text(
-          "Settings",
+          "All Notifications",
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.w600,
@@ -39,7 +40,400 @@ class _AllNotificationsState extends State<AllNotifications> {
       body: ListView(
         physics: BouncingScrollPhysics(),
         padding: EdgeInsets.all(16),
-        children: [],
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5),
+            child: Container(
+              padding: EdgeInsets.all(12.0),
+              decoration: BoxDecoration(
+                color: AppColors.darkGrey,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              alignment: Alignment.center,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  gapW4,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Notification Name',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.white,
+                          letterSpacing: -0.33,
+                        ),
+                      ),
+                      Text(
+                        '8/13/2023',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xff9A9A9A),
+                          letterSpacing: -0.33,
+                        ),
+                      ),
+                    ],
+                  ),
+                  gapH4,
+                  Row(
+                    children: [
+                      Expanded(
+                          child: Text(
+                        'Lorem ipsum is a placeholder text \ncommonly used to demonstrate the...',
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Color(0xff9A9A9A),
+                            letterSpacing: -0.33,
+                            fontWeight: FontWeight.w400),
+                      )),
+                    ],
+                  ),
+                  gapW4,
+                ],
+              ),
+            ),
+          ),
+        
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5),
+            child: Container(
+              padding: EdgeInsets.all(12.0),
+              decoration: BoxDecoration(
+                color: AppColors.darkGrey,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              alignment: Alignment.center,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  gapW4,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Notification Name',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.white,
+                          letterSpacing: -0.33,
+                        ),
+                      ),
+                      Text(
+                        '8/13/2023',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xff9A9A9A),
+                          letterSpacing: -0.33,
+                        ),
+                      ),
+                    ],
+                  ),
+                  gapH4,
+                  Row(
+                    children: [
+                      Expanded(
+                          child: Text(
+                        'Lorem ipsum is a placeholder text \ncommonly used to demonstrate the...',
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Color(0xff9A9A9A),
+                            letterSpacing: -0.33,
+                            fontWeight: FontWeight.w400),
+                      )),
+                    ],
+                  ),
+                  gapW4,
+                ],
+              ),
+            ),
+          ),
+        
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5),
+            child: Container(
+              padding: EdgeInsets.all(12.0),
+              decoration: BoxDecoration(
+                color: AppColors.darkGrey,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              alignment: Alignment.center,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  gapW4,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Notification Name',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.white,
+                          letterSpacing: -0.33,
+                        ),
+                      ),
+                      Text(
+                        '8/13/2023',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xff9A9A9A),
+                          letterSpacing: -0.33,
+                        ),
+                      ),
+                    ],
+                  ),
+                  gapH4,
+                  Row(
+                    children: [
+                      Expanded(
+                          child: Text(
+                        'Lorem ipsum is a placeholder text \ncommonly used to demonstrate the...',
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Color(0xff9A9A9A),
+                            letterSpacing: -0.33,
+                            fontWeight: FontWeight.w400),
+                      )),
+                    ],
+                  ),
+                  gapW4,
+                ],
+              ),
+            ),
+          ),
+        
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5),
+            child: Container(
+              padding: EdgeInsets.all(12.0),
+              decoration: BoxDecoration(
+                color: AppColors.darkGrey,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              alignment: Alignment.center,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  gapW4,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Notification Name',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.white,
+                          letterSpacing: -0.33,
+                        ),
+                      ),
+                      Text(
+                        '8/13/2023',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xff9A9A9A),
+                          letterSpacing: -0.33,
+                        ),
+                      ),
+                    ],
+                  ),
+                  gapH4,
+                  Row(
+                    children: [
+                      Expanded(
+                          child: Text(
+                        'Lorem ipsum is a placeholder text \ncommonly used to demonstrate the...',
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Color(0xff9A9A9A),
+                            letterSpacing: -0.33,
+                            fontWeight: FontWeight.w400),
+                      )),
+                    ],
+                  ),
+                  gapW4,
+                ],
+              ),
+            ),
+          ),
+        
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5),
+            child: Container(
+              padding: EdgeInsets.all(12.0),
+              decoration: BoxDecoration(
+                color: AppColors.darkGrey,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              alignment: Alignment.center,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  gapW4,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Notification Name',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.white,
+                          letterSpacing: -0.33,
+                        ),
+                      ),
+                      Text(
+                        '8/13/2023',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xff9A9A9A),
+                          letterSpacing: -0.33,
+                        ),
+                      ),
+                    ],
+                  ),
+                  gapH4,
+                  Row(
+                    children: [
+                      Expanded(
+                          child: Text(
+                        'Lorem ipsum is a placeholder text \ncommonly used to demonstrate the...',
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Color(0xff9A9A9A),
+                            letterSpacing: -0.33,
+                            fontWeight: FontWeight.w400),
+                      )),
+                    ],
+                  ),
+                  gapW4,
+                ],
+              ),
+            ),
+          ),
+        
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5),
+            child: Container(
+              padding: EdgeInsets.all(12.0),
+              decoration: BoxDecoration(
+                color: AppColors.darkGrey,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              alignment: Alignment.center,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  gapW4,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Notification Name',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.white,
+                          letterSpacing: -0.33,
+                        ),
+                      ),
+                      Text(
+                        '8/13/2023',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xff9A9A9A),
+                          letterSpacing: -0.33,
+                        ),
+                      ),
+                    ],
+                  ),
+                  gapH4,
+                  Row(
+                    children: [
+                      Expanded(
+                          child: Text(
+                        'Lorem ipsum is a placeholder text \ncommonly used to demonstrate the...',
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Color(0xff9A9A9A),
+                            letterSpacing: -0.33,
+                            fontWeight: FontWeight.w400),
+                      )),
+                    ],
+                  ),
+                  gapW4,
+                ],
+              ),
+            ),
+          ),
+        
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5),
+            child: Container(
+              padding: EdgeInsets.all(12.0),
+              decoration: BoxDecoration(
+                color: AppColors.darkGrey,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              alignment: Alignment.center,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  gapW4,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Notification Name',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.white,
+                          letterSpacing: -0.33,
+                        ),
+                      ),
+                      Text(
+                        '8/13/2023',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xff9A9A9A),
+                          letterSpacing: -0.33,
+                        ),
+                      ),
+                    ],
+                  ),
+                  gapH4,
+                  Row(
+                    children: [
+                      Expanded(
+                          child: Text(
+                        'Lorem ipsum is a placeholder text \ncommonly used to demonstrate the...',
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Color(0xff9A9A9A),
+                            letterSpacing: -0.33,
+                            fontWeight: FontWeight.w400),
+                      )),
+                    ],
+                  ),
+                  gapW4,
+                ],
+              ),
+            ),
+          ),
+        
+        ],
       ),
     );
   }
