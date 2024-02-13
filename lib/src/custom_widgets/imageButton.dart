@@ -21,7 +21,7 @@ class ImageButton extends StatelessWidget {
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           // color: Color(0xff2F2F2F),
-          color: Colors.grey.shade800,
+          color: AppColors.darkGrey,
         ),
         alignment: Alignment.center,
         child: Image.asset(
