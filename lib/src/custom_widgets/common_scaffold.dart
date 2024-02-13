@@ -24,7 +24,10 @@ class CommonScaffold extends StatelessWidget {
               ),
             ),
             Container(
-                height: double.infinity, width: double.infinity, child: body),
+              height: double.infinity,
+              width: double.infinity,
+              child: body,
+            ),
           ],
         ),
       ),

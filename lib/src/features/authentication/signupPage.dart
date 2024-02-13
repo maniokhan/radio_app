@@ -224,7 +224,7 @@ class _SignupPageState extends State<SignupPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
-                "you have already an account?",
+                "You Have Already An Account?",
                 style: TextStyle(
                   fontSize: 14,
                   color: AppColors.white,
@@ -240,7 +240,7 @@ class _SignupPageState extends State<SignupPage> {
                   );
                 },
                 child: const Text(
-                  " login ",
+                  " Login ",
                   style: TextStyle(
                     fontSize: 14,
                     color: AppColors.primary,
