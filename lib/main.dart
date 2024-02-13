@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:radio_app/src/constants/app_colors.dart';
 import 'package:radio_app/src/features/splash_screen.dart';
+import 'package:radio_app/src/settings/home.dart';
 
 void main() {
   runApp(
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
           background: AppColors.background,
         ),
       ),
-      home: SplashScreen(),
+      // home: SplashScreen(),
+      home: HomeSettingsPage(),
     );
   }
 }
