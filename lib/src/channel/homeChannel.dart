@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../constants/app_colors.dart';
 import '../constants/app_sizes.dart';
+import '../custom_widgets/channelTile.dart';
 
 class HomeChannel extends StatefulWidget {
   const HomeChannel({super.key});
@@ -17,7 +18,7 @@ class _HomeChannelState extends State<HomeChannel> {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            // Navigator.pop(context);
+            Navigator.pop(context);
           },
           icon: Icon(
             Icons.arrow_back_rounded,
@@ -36,10 +37,33 @@ class _HomeChannelState extends State<HomeChannel> {
         ),
         centerTitle: true,
       ),
-      body: ListView(
+      floatingActionButton: FloatingActionButton(
+          shape: CircleBorder(), // Set shape to CircleBorder
+          backgroundColor: AppColors.primary, // Set your desired background color
+          onPressed: () {},
+          child: Icon(
+            Icons.add,
+            color: AppColors.white, // Set your desired icon color
+          ),
+        ),
+        body: ListView(
         physics: const BouncingScrollPhysics(),
         padding: const EdgeInsets.all(16),
         children: [
+          TextField(
+            decoration: InputDecoration(
+              filled: true, // Add filled property
+              fillColor: AppColors.darkGrey, // Set background color here
+              border: OutlineInputBorder(
+                borderSide: BorderSide.none, // Remove border color
+                borderRadius:
+                    BorderRadius.circular(20.0), // Set border radius here
+              ),
+              hintText: 'Search...',
+              prefixIcon: Icon(Icons.search),
+            ),
+          ),
+          gapH28,
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -54,76 +78,18 @@ class _HomeChannelState extends State<HomeChannel> {
               )
             ],
           ),
-          Container(
-            height: 150.0,
-            decoration: BoxDecoration(
-              color: AppColors.darkGrey,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            alignment: Alignment.center,
-            child: Row(
-              children: [
-                Column(
-                  children: [
-                    Image(
-                      image: AssetImage('assets/icons/channel.png'),
-                      width: 150,
-                    )
-                  ],
-                ),
-                Container(
-                  padding: const EdgeInsets.all(4.0),
-                  child: Column(
-                    children: [
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Channel Name',
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500,
-                                color: AppColors.white),
-                          )
-                        ],
-                      ),
-                      gapH12,
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Radio Station: 16',
-                            style: TextStyle(
-                              
-                                fontSize: 16,
-                                fontWeight: FontWeight.w400,
-                                color: AppColors.white,
-                                letterSpacing: -0.33),
-                          )
-                        ],
-                      ),
-                      gapH12,
-
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Icon(
-                            Icons.edit,
-                            color: AppColors.white,
-                          ),
-                          gapW4,
-                          Icon(
-                            Icons.delete_outline,
-                            color: AppColors.white,
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          )
+          gapH18,
+          ChannelTile(),
+          ChannelTile(),
+          ChannelTile(),
+          ChannelTile(),
+          ChannelTile(),
+          ChannelTile(),
+          ChannelTile(),
+          ChannelTile(),
+          ChannelTile(),
+          ChannelTile(),
+          ChannelTile(),
         ],
       ),
     );
