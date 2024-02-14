@@ -4,7 +4,11 @@ import 'package:radio_app/src/constants/app_colors.dart';
 import 'package:radio_app/src/features/splash_screen.dart';
 import 'package:radio_app/src/settings/allNotificationsSettings.dart';
 import 'package:radio_app/src/settings/home.dart';
+import 'package:radio_app/src/settings/profileSetting.dart';
+import 'package:radio_app/src/settings/wishlist.dart';
 
+import 'src/channel/homeChannel.dart';
+import 'src/settings/help.dart';
 import 'src/settings/notifications.dart';
 import 'src/settings/notificationsName.dart';
 
@@ -28,7 +32,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       // home: SplashScreen(),
-      home: const AllNotifications(),
+      home: HomeChannel(),
     );
   }
 }
