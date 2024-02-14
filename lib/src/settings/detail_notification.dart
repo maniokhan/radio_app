@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import '../constants/app_colors.dart';
 import '../constants/app_sizes.dart';
 
-class NotificationsName extends StatefulWidget {
-  const NotificationsName({super.key});
+class DetailNotification extends StatefulWidget {
+  const DetailNotification({super.key});
 
   @override
-  State<NotificationsName> createState() => _NotificationsNameState();
+  State<DetailNotification> createState() => _DetailNotificationState();
 }
 
-class _NotificationsNameState extends State<NotificationsName> {
+class _DetailNotificationState extends State<DetailNotification> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +18,7 @@ class _NotificationsNameState extends State<NotificationsName> {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            // Navigator.pop(context);
+            Navigator.pop(context);
           },
           icon: Icon(
             Icons.arrow_back_rounded,
@@ -44,13 +44,13 @@ class _NotificationsNameState extends State<NotificationsName> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 5),
             child: Container(
-              padding: EdgeInsets.all(12.0),
+              padding: const EdgeInsets.all(12.0),
               decoration: BoxDecoration(
                 color: AppColors.darkGrey,
                 borderRadius: BorderRadius.circular(10),
               ),
               alignment: Alignment.center,
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   gapW4,
@@ -58,7 +58,7 @@ class _NotificationsNameState extends State<NotificationsName> {
                     children: [
                       Expanded(
                           child: Text(
-                        "Lorem Ipsum is simply dummy text of the\n printing and typesetting industry. Lorem\n Ipsum has been the industry's standard\n dummy text ever since the 1500s, when an\n  unknown printer took a galley of type and\n  scrambled it to make a type specimen book.\n  It has survived not only five centuries, but\n  also the leap into electronic typesetting,\n  remaining essentially unchanged.",
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
                         style: TextStyle(
                             fontSize: 16,
                             color: Color(0xff9A9A9A),
