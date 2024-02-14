@@ -224,24 +224,23 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
       context: context,
       builder: (BuildContext context) {
         return Dialog(
+          surfaceTintColor: Color(0xFF262525),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
           ),
           backgroundColor: Color(0xFF262525),
           child: Container(
-            width: 290,
-            height: 220,
+            height: 440,
             padding: EdgeInsets.all(16.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
                   'assets/icons/sucess_icon.png',
-                  width: 166,
-                  height: 166,
+                  height: 140,
                   fit: BoxFit.fill,
                 ),
-                gapH28,
+                gapH32,
                 Text(
                   "Registration Successfully",
                   style: TextStyle(
@@ -251,6 +250,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
+                gapH4,
                 Text(
                   "Please login with your created email and password",
                   textAlign: TextAlign.center,
@@ -261,22 +261,27 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                     fontWeight: FontWeight.w400,
                   ),
                 ),
-                SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.blue,
-                    onPrimary: Colors.white,
-                    minimumSize: Size(290, 60),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
+                SizedBox(height: 30),
+                InkWell(
+                  borderRadius: BorderRadius.circular(5),
+                  onTap: () {},
+                  child: Container(
+                    height: 60,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        border: Border.all(
+                          color: AppColors.white,
+                        )),
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Login",
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: AppColors.white,
+                        letterSpacing: -0.33,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
-                  ),
-                  child: Text(
-                    'Button Text',
-                    style: TextStyle(fontSize: 18),
                   ),
                 ),
               ],

@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:radio_app/src/channel/homeChannel.dart';
+import 'package:radio_app/src/settings/help.dart';
+import 'package:radio_app/src/settings/notifications.dart';
+import 'package:radio_app/src/settings/profileSetting.dart';
+import 'package:radio_app/src/settings/wishlist.dart';
+
 import '../constants/app_colors.dart';
 import '../constants/app_sizes.dart';
 import '../custom_widgets/common_setting_tile.dart';
@@ -39,10 +45,14 @@ class _HomeSettingsPageState extends State<HomeSettingsPage> {
       ),
       body: ListView(
         physics: BouncingScrollPhysics(),
-        padding: EdgeInsets.all(16),
+        //  padding: EdgeInsets.all(16),
         children: [
-          const CommonSettingTile(
-            icon: Icon(
+          CommonSettingTile(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Notifications()));
+            },
+            icon: const Icon(
               Icons.notifications_outlined,
               color: AppColors.white,
               size: 26,
@@ -50,7 +60,11 @@ class _HomeSettingsPageState extends State<HomeSettingsPage> {
             title: 'Notifications',
             avatarColor: Color(0xffFF0075),
           ),
-          const CommonSettingTile(
+         CommonSettingTile(
+           onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => HomeChannel()));
+            },
             icon: Icon(
               Icons.notifications_outlined,
               color: AppColors.white,
@@ -59,7 +73,6 @@ class _HomeSettingsPageState extends State<HomeSettingsPage> {
             title: 'Channels',
             avatarColor: Color(0xffFC840D),
           ),
-          
           const CommonSettingTile(
             icon: Icon(
               Icons.notifications_outlined,
@@ -69,7 +82,11 @@ class _HomeSettingsPageState extends State<HomeSettingsPage> {
             title: 'Schedule',
             avatarColor: Color(0xff1A5B80),
           ),
-          const CommonSettingTile(
+         CommonSettingTile(
+             onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => WishListSettings()));
+            },
             icon: Icon(
               Icons.notifications_outlined,
               color: AppColors.white,
@@ -78,7 +95,11 @@ class _HomeSettingsPageState extends State<HomeSettingsPage> {
             title: 'Wishlist',
             avatarColor: Color(0xff7B61FF),
           ),
-          const CommonSettingTile(
+          CommonSettingTile(
+             onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => HelpSupportSettings()));
+            },
             icon: Icon(
               Icons.notifications_outlined,
               color: AppColors.white,
@@ -87,7 +108,11 @@ class _HomeSettingsPageState extends State<HomeSettingsPage> {
             title: 'Help & Support',
             avatarColor: Color(0xff58ED93),
           ),
-          const CommonSettingTile(
+           CommonSettingTile(
+             onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ProfileSetting()));
+            },
             icon: Icon(
               Icons.person,
               color: AppColors.white,
@@ -96,10 +121,12 @@ class _HomeSettingsPageState extends State<HomeSettingsPage> {
             title: 'Profile',
             avatarColor: Color(0xff58ED93),
           ),
+          gapH12,
           Container(
+            height: 58,
             color: Color(0xff7B61FF),
             padding: EdgeInsets.symmetric(vertical: 16, horizontal: 12),
-            child: Row(
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
@@ -122,41 +149,48 @@ class _HomeSettingsPageState extends State<HomeSettingsPage> {
             ),
           ),
           gapH16,
-          Material(
-            color: AppColors.primary,
-            borderRadius: BorderRadius.circular(5.0),
-            child: InkWell(
-              borderRadius: BorderRadius.circular(5.0),
-              onTap: () {},
-              child: Container(
-                width: MediaQuery.of(context).size.width/3,
-                height: 55,
-                decoration: BoxDecoration(
-                  //color: AppColors.primary,
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 100),
+            child: Container(
+              child: Material(
+                color: AppColors.primary,
+                borderRadius: BorderRadius.circular(5.0),
+                child: InkWell(
                   borderRadius: BorderRadius.circular(5.0),
-                ),
-                alignment: Alignment.center,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.logout_outlined,
-                      color: AppColors.white,
+                  onTap: () {},
+                  child: Container(
+                    width: 190,
+                    height: 55,
+                    decoration: BoxDecoration(
+                      //color: AppColors.primary,
+                      borderRadius: BorderRadius.circular(5.0),
                     ),
-                    const Text(
-                      "Logout",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: AppColors.white,
-                        letterSpacing: -0.33,
-                      ),
+                    alignment: Alignment.center,
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.logout_outlined,
+                          color: AppColors.white,
+                        ),
+                        gapW8,
+                        const Text(
+                          "Logout",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500,
+                            color: AppColors.white,
+                            letterSpacing: -0.33,
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               ),
             ),
           ),
+          gapH24,
         ],
       ),
     );
